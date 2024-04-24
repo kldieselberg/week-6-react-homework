@@ -8,7 +8,7 @@ export default function App() {
         <h1></h1>
         <Weather />
         <footer>
-          This project is open sourced on{" "}
+          This project is coded by Kristina Dieselberg and open sourced on{" "}
           <a href="https://github.com/kldieselberg/week-6-react-homework">
             Github
           </a>{" "}
