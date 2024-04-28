@@ -6,6 +6,8 @@ import axios from "axios";
 export default function Weather() {
   const [ready, setReady] = useState(false);
   const [weatherData, setWeatherData] = useState(false);
+  const [city, setCity] = useState(props.defaultCity);
+
   function handleResponse(response) {
     console.log(response.data);
     setWeatherData({
@@ -14,16 +16,24 @@ export default function Weather() {
       city: response.data.name,
       humidity: response.data.main.humidity,
       description: response.data.weather[0].description,
-      iconUrl: "",
+      iconUrl: "https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png",
       date: new Date(response.data.dt * 1000),
     });
     setReady(true);
+  }
+  function handleSubmit(event) {
+    event.preventDefault();
+    alert(city);
+  }
+
+  function handleCityChange(event) {
+    setCity(event.target.value);
   }
 
   if (ready) {
     return (
       <div className="Weather">
-        <form action="">
+        <form onSubmit={handleSubmit}>
           <div className="row">
             <div className="col-9">
               <input
@@ -31,6 +41,7 @@ export default function Weather() {
                 placeholder="Enter a city..."
                 className="form-control"
                 autoFocus="on"
+                onChange={handleCityChange}
               />
             </div>
             <div className="col-3">

@@ -4,7 +4,7 @@ import StructureDate from "./structureDate";
 export default function WeatherInfo(props) {
   return (
     <div className="Weather Info">
-      <h1>{weatherData.city}</h1>
+      <h1>{props.data.city}</h1>
       <ul>
         <li>
           <StructureDate date={props.data.date} />
