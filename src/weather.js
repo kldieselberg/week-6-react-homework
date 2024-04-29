@@ -3,7 +3,7 @@ import "./Weather.css";
 import WeatherInfo from "./WeatherInfo";
 import axios from "axios";
 
-export default function Weather() {
+export default function Weather(props) {
   const [ready, setReady] = useState(false);
   const [weatherData, setWeatherData] = useState(false);
   const [city, setCity] = useState(props.defaultCity);
@@ -16,14 +16,21 @@ export default function Weather() {
       city: response.data.name,
       humidity: response.data.main.humidity,
       description: response.data.weather[0].description,
-      iconUrl: "https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png",
+      icon: response.data.weather[0].icon,
+
       date: new Date(response.data.dt * 1000),
     });
     setReady(true);
   }
   function handleSubmit(event) {
     event.preventDefault();
-    alert(city);
+    searchCity(city);
+  }
+
+  function searchCity() {
+    const apiKey = "f09d3949047ab6c9e3bcaf79cf61f619";
+    let apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    axios.get(apiURL).then(handleResponse);
   }
 
   function handleCityChange(event) {
@@ -57,11 +64,7 @@ export default function Weather() {
       </div>
     );
   } else {
-    const apiKey = "f09d3949047ab6c9e3bcaf79cf61f619";
-    let city = "New York";
-    let apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-    axios.get(apiURL).then(handleResponse);
-
+    searchCity();
     return "Loading...";
   }
 }

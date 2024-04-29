@@ -1,5 +1,6 @@
 import React from "react";
 import StructureDate from "./structureDate";
+import WeatherIcon from "./WeatherIcon";
 
 export default function WeatherInfo(props) {
   return (
@@ -15,11 +16,9 @@ export default function WeatherInfo(props) {
         <div className="col-6">
           <div className="clearfix">
             {" "}
-            <img
-              src={props.data.iconUrl}
-              alt={props.data.description}
-              className="float-left"
-            ></img>
+            <div className="float-left ">
+              <WeatherIcon code={props.data.icon} />
+            </div>
             <div className="float-left">
               <span className="temperature">
                 {Math.round(props.data.temperature)}
@@ -32,7 +31,7 @@ export default function WeatherInfo(props) {
           <ul>
             <li>Wind: {props.data.wind}</li>
             <li>Humidity: {props.data.humidity}</li>
-            <li>Perciptation</li>
+            <li></li>
           </ul>
         </div>
       </div>
