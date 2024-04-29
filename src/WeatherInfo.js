@@ -23,7 +23,7 @@ export default function WeatherInfo(props) {
               <span className="temperature">
                 {Math.round(props.data.temperature)}
               </span>
-              <span className="degree">C</span>
+              <span className="degree">ºC</span>
             </div>
           </div>
         </div>
