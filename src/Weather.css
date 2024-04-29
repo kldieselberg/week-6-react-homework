@@ -48,4 +48,8 @@
   top: -32px;
   margin-left: 5px;
   line-height: 1;
+  text-decoration: none;
+}
+.Weather .degree .a {
+  text-decoration: none;
 }

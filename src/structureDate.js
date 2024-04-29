@@ -19,7 +19,7 @@ export default function StructureDate(props) {
 
   let minutes = props.date.getMinutes();
   if (minutes < 10) {
-    minutes = `${minutes}`;
+    minutes = `0${minutes}`;
   }
 
   return (
