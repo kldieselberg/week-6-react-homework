@@ -30,10 +30,8 @@
   list-style: none;
 }
 .Weather canvas {
-  height: 64px;
   display: inline-block;
   margin-right: 10px;
-  width: 64px;
   margin-top: 19px;
 }
 .Weather .temperature {
@@ -48,8 +46,5 @@
   top: -32px;
   margin-left: 5px;
   line-height: 1;
-  text-decoration: none;
-}
-.Weather .degree .a {
   text-decoration: none;
 }

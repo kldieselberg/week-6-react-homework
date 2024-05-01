@@ -8,43 +8,7 @@ export default function WeatherForecast(props) {
       <div className="row">
         <div className="col">
           <div className="ForecastDay">Thu</div>{" "}
-          <WeatherIcon code="01d" size={30} />{" "}
-          <div className="ForecastTemperature">
-            {" "}
-            <span className="Forecast-min">19</span>{" "}
-            <span className="Forecast-max">20 </span>
-          </div>
-        </div>
-        <div className="col">
-          <div className="ForecastDay">Thu</div>{" "}
-          <WeatherIcon code="01d" size={30} />{" "}
-          <div className="ForecastTemperature">
-            {" "}
-            <span className="Forecast-min">19</span>{" "}
-            <span className="Forecast-max">20 </span>
-          </div>
-        </div>
-        <div className="col">
-          <div className="ForecastDay">Thu</div>{" "}
-          <WeatherIcon code="01d" size={30} />{" "}
-          <div className="ForecastTemperature">
-            {" "}
-            <span className="Forecast-min">19</span>{" "}
-            <span className="Forecast-max">20 </span>
-          </div>
-        </div>
-        <div className="col">
-          <div className="ForecastDay">Thu</div>{" "}
-          <WeatherIcon code="01d" size={30} />{" "}
-          <div className="ForecastTemperature">
-            {" "}
-            <span className="Forecast-min">19</span>{" "}
-            <span className="Forecast-max">20 </span>
-          </div>
-        </div>
-        <div className="col">
-          <div className="ForecastDay">Thu</div>{" "}
-          <WeatherIcon code="01d" size={30} />{" "}
+          <WeatherIcon code="01d" size={20} />{" "}
           <div className="ForecastTemperature">
             {" "}
             <span className="Forecast-min">19</span>{" "}
