@@ -1,0 +1,12 @@
+.WeatherForecast {
+  text-align: center;
+}
+.Forecast-min {
+  opacity: 0.5;
+}
+.Forecast-max {
+  opacity: 0.5;
+}
+.WeatherIcon {
+  font-size: 3px;
+}
