@@ -11,7 +11,7 @@ export default function App() {
           <a
             href="https://github.com/kldieselberg/week-6-react-homework"
             target="_blank"
-            rel="noopener noreference"
+            rel="noreferrer"
           >
             Github
           </a>{" "}
