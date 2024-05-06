@@ -2,10 +2,11 @@ import React from "react";
 import StructureDate from "./structureDate";
 import WeatherIcon from "./WeatherIcon";
 import WeatherDegree from "./WeatherDegree";
+import "./WeatherInfo.css";
 
 export default function WeatherInfo(props) {
   return (
-    <div className="Weather Info">
+    <div className="Weather-Info">
       <h1>{props.data.city}</h1>
       <ul>
         <li>
@@ -13,7 +14,7 @@ export default function WeatherInfo(props) {
         </li>
         <li className="text-capitalize">{props.data.description}</li>
       </ul>
-      <div className="row mt-3">
+      <div className="row mt-3 mb-5">
         <div className="col-6">
           <div className="clearfix">
             {" "}
@@ -26,7 +27,7 @@ export default function WeatherInfo(props) {
           </div>
         </div>
         <div className="col-6">
-          <ul>
+          <ul className="mt-4">
             <li>Wind: {props.data.wind}%</li>
             <li>Humidity: {props.data.humidity}km/h</li>
             <li></li>

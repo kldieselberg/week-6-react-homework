@@ -1,10 +1,16 @@
 .Weather {
-  border: 1px solid #dadde1;
+  border: 1px solid rgb(212, 235, 255);
   text-align: left;
   font-family: Arial, Helvetica, sans-serif;
   padding: 16px;
   margin: 30px auto;
-  border-radius: 4px;
+  border-radius: 10px;
+  background: rgb(212, 235, 255);
+  background: linear-gradient(
+    5deg,
+    rgba(212, 235, 255, 1) 0%,
+    rgba(249, 251, 250, 1) 64%
+  );
 }
 .Weather form {
   margin-bottom: 20px;
@@ -12,12 +18,13 @@
 
 .Weather h1 {
   color: #dadde1;
-  color: rgb(135, 135, 135);
+  color: rgb(109, 108, 108);
   display: block;
-  font-size: 24px;
+  font-size: 30px;
   font-weight: 100;
   line-height: 29px;
   margin: 20px 0 0 0;
+  margin-bottom: 8px;
 }
 .Weather ul {
   margin: 0;
@@ -31,7 +38,7 @@
 }
 .Weather canvas {
   display: inline-block;
-  margin-right: 10px;
+  margin-right: 0auto;
   margin-top: 19px;
 }
 .Weather .temperature {
