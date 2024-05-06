@@ -8,7 +8,13 @@ export default function App() {
         <Weather defaultCity="New York" />
         <footer>
           This project is coded by Kristina Dieselberg and open sourced on{" "}
-          <a href="https://openweathermap.org/img/wn/10d@2x.png">Github</a>{" "}
+          <a
+            href="https://github.com/kldieselberg/week-6-react-homework"
+            target="_blank"
+            rel="noopener noreference"
+          >
+            Github
+          </a>{" "}
         </footer>
       </div>
     </div>
